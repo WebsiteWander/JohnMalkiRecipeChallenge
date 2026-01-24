@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Malki's Healthy Recipes Challenge</title>
+
+  <style>
+    /* ---------- Base Styles ---------- */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px 0;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      padding: 10px 16px;
+      background: #333;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    /* ---------- Recipe Grid (Home Page) ---------- */
+    #homePage {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .recipe-card {
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .recipe-card,
+    .recipe-card * {
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .recipe-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* square image */
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .recipe-card .card-body {
+      padding: 12px;
+    }
+
+    /* ---------- Recipe Page ---------- */
+    .recipe-page {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .recipe-page button {
+      cursor: pointer;          /* hand cursor */
+      pointer-events: auto;
+      user-select: none;        /* prevent accidental selection */
+    }
+
+    .recipe-page,
+    .recipe-page * {
+      user-select: text;       /* allow text to be highlighted */
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      caret-color: transparent; /* hide blinking caret */
+      cursor: text;            /* shows regular text selection cursor */
+    }
+
+    .recipe-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 20px;
+    }
+
+    .recipe-image {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* square image */
+      background: #ddd;
+      object-fit: cover;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    ol {
+      padding-left: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .recipe-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>John Malki's Healthy Recipes Challenge</h1>
+  <p>Want to be healthy like John Malki? Try these recipes. <br><br>(Also, try not to add any extra ingredients. It's a challenge for a reason after all.)</p>
+</header>
+
+<main>
+  <!-- ---------- HOME PAGE ---------- -->
+  <section id="homePage">
+    <div class="recipe-card" onclick="openRecipe('slow-cooker-black-bean-soup')">
+      <img src="pictures/Black Bean pic test.jpg" alt="Pancakes image placeholder" />
+      <div class="card-body">
+        <h3>Slow Cooker Black Bean Soup</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE: Slow Cooker Black Bean Soup ---------- -->
+  <section id="slow-cooker-black-bean-soup" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Slow Cooker Black Bean Soup</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/Black Bean pic test.jpg" alt="Slow Cooker Black Bean Soup photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 <b>Onion</b>, chopped</li>
+          <li>2 <b>Red Bell Peppers</b>, cored and chopped</li>
+          <li>2 <b>Carrots</b>, chopped</li>
+          <li>5 <b>Garlic Cloves</b>, minced</li>
+          <li>1 <b>Jalapeno Pepper</b>, seeded and diced</li>
+          <li>4 Cups of (good quality) <b>Vegetable Stock</b></li>
+          <li>4 (15 ounce) cans of <b>Black Beans</b>, rinsed and drained</li>
+          <li>1 can of <b>Corn</b>, drained</li>
+          <li>1 can of <b>Green Chilis (Mild)</b>, drained and rinsed</li>
+          <li>1 <b>Bay Leaf</b></li>
+          <li>2 tsps. of <b>Ground Cumin</b></li>
+          <li>2 tsps. of <b>Chili Powder</b></li>
+          <li>2 Tsps. of <b>Kosher Salt</b></li>
+          <li>1/2 Tsp. of <b>Cayenne</b></li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+          <li>Combine all ingredients in slow cooker bowl/Instapot, and stir to combine</li>
+          <li>Cook on high for 4 hours</li>
+          <li>Remove the Bay Leaf before eating (if possible)</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE: MUFFINS ---------- -->
+  <section id="muffins" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <h2>Muffins</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="" alt="Muffins photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 cups flour</li>
+          <li>1/2 cup sugar</li>
+          <li>2 tsp baking powder</li>
+          <li>1 cup milk</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+          <li>Preheat oven to 350°F.</li>
+          <li>Mix ingredients.</li>
+          <li>Bake for 20 minutes.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  function openRecipe(id) {
+    document.getElementById('homePage').style.display = 'none';
+
+    document.querySelectorAll('.recipe-page').forEach(page => {
+      page.style.display = 'none';
+    });
+
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function goHome() {
+    document.getElementById('homePage').style.display = 'grid';
+
+    document.querySelectorAll('.recipe-page').forEach(page => {
+      page.style.display = 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
