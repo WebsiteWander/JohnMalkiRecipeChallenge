@@ -138,6 +138,10 @@
       padding-left: 18px;
     }
 
+    .header {
+      cursor: pointer;
+    }
+
     @media (max-width: 700px) {
       .recipe-layout {
         grid-template-columns: 1fr;
@@ -148,7 +152,7 @@
 <body>
 
 <header>
-  <h1>John Malki's Healthy Recipes Challenge</h1>
+  <h1 class="header" onclick="goHome()">John Malki's Healthy Recipes Challenge</h1>
   <p>Want to be healthy like John Malki? Try these recipes.</p>
   <p>(Also, try not to add any extra ingredients. It's a challenge for a reason after all.)</p>
 </header>
@@ -193,7 +197,63 @@
     <div class="recipe-card" onclick="openRecipe('blueberry-oat-muffins')">
       <img src="pictures/blueberry-oatmeal-muffins.jpg" alt="Blueberry Oat Muffins image placeholder" />
       <div class="card-body">
-        <h3>Blueberry Oat Muffins</h3>
+        <h3>Blueberry Oat Muffins (created by Brent)</h3>
+      </div>
+    </div>
+
+    <!-- Recipe #6: Tahini-Free Hummus -->
+    <div class="recipe-card" onclick="openRecipe('tahini-free-hummus')">
+      <img src="pictures/hummus-0047-d112594_horiz-0823-687fda3ffe6f4a28ab2c7e50b5848843.jpg" alt="Tahini-Free Hummus image placeholder" />
+      <div class="card-body">
+        <h3>Tahini-Free Hummus (created by Brent)</h3>
+      </div>
+    </div>
+
+    <!-- Recipe #7: Spaghetti Sauce -->
+    <div class="recipe-card" onclick="openRecipe('spaghetti-sauce')">
+      <img src="pictures/homemade-spaghetti-sauce-recipe-29.jpg" alt="Spaghetti Sauce image placeholder" />
+      <div class="card-body">
+        <h3>Spaghetti Sauce (created by Brent)</h3>
+      </div>
+    </div>
+
+    <!-- Recipe #8: Banana Bread Muffins -->
+    <div class="recipe-card" onclick="openRecipe('banana-bread-muffins')">
+      <img src="pictures/banana-bread-muffins-9s.jpg" alt="Banana Bread Muffins image placeholder" />
+      <div class="card-body">
+        <h3>Banana Bread Muffins (created by Brent)</h3>
+      </div>
+    </div>
+
+    <!-- Recipe #9: Chickpea “Chicken” Salad -->
+    <div class="recipe-card" onclick="openRecipe('chickpea-chicken-salad')">
+      <img src="pictures/Summer-Chickpea-Salad-16-1020x1530.jpg" alt="Chickpea “Chicken” Salad image placeholder" />
+      <div class="card-body">
+        <h3>Chickpea “Chicken” Salad (created by Brent)</h3>
+      </div>
+    </div>
+    
+    <!-- Recipe #10: Potato Fries -->
+    <div class="recipe-card" onclick="openRecipe('potato-fries')">
+      <img src="pictures/airfryerfrozenfries.jpg" alt="Potato Fries image placeholder" />
+      <div class="card-body">
+        <h3>Potato Fries (created by Brent)</h3>
+      </div>
+    </div>
+
+    <!-- Recipe #11: Healthy Ketchup -->
+    <div class="recipe-card" onclick="openRecipe('healthy-ketchup')">
+      <img src="pictures/2-Minute-healthy-ketchup-recipe.jpg" alt="Healthy Ketchup image placeholder" />
+      <div class="card-body">
+        <h3>Healthy Ketchup (created by Brent)</h3>
+      </div>
+    </div>
+
+    <!-- Recipe #12: Healthy Mayonnaise -->
+    <div class="recipe-card" onclick="openRecipe('healthy-mayonnaise')">
+      <img src="pictures/Healthy-Mayonnaise-Recipe-2.jpg" alt="Healthy Mayonnaise image placeholder" />
+      <div class="card-body">
+        <h3>Healthy Mayonnaise (created by Brent)</h3>
       </div>
     </div>
   </section>
@@ -289,8 +349,8 @@
           <li>1/2 tsp. and 1/4 tsp. of <b>Pink Sea Salt</b></li>
           <li>1/4 tsp. of <b>Black Pepper</b></li>
           <li>3/4 cups (or 1 1/2 cups) of <b>Water</b></li>
-          <li>1/4 tsp. of <b>Sweet Paprika</b></li>
-          <li>1 Tbsp. of fresh <b>Chives</b></li>
+          <li>(Optional) 1/4 tsp. of <b>Sweet Paprika</b></li>
+          <li>(Optional) 1 Tbsp. of fresh <b>Chives</b></li>
         </ul>
 
         <h3>Instructions</h3>
@@ -327,7 +387,7 @@
           <li>1 1/2 cups of dry <b>Brown Rice</b></li>
           <li>1 medium <b>Yellow Onion</b>, diced</li>
           <li>1 medium <b>Green (or Red) Bell Pepper</b>, diced</li>
-          <li>3 stalks of <b>Celery</b>, diced</li>
+          <li>3 stalks of <b>Celery</b>, chopped</li>
           <li>3 or 4 <b>Garlic Cloves</b>, minced</li>
           <li>1 1/2 Tbsps. of <b>Cajun Seasoning</b> (with Sodium) OR 1/2 tsp. of <b>Pink Sea Salt</b></li>
           <li>2 tsps. of <b>Dry Thyme</b></li>
@@ -368,14 +428,13 @@
         <ul>
           <li>2 Tbsps. of <b>Ground Flaxseed</b> (if you have regular Flaxseed, use the blender to grind it down)</li>
           <li>1½ cups of <b>Rolled Oats</b>, blended into oat flour</li>
-          <li>1 <b>Banana</b> / 1 cup unsweetened <b>Applesauce</b></li>
-          <li>¾ cup unsweetened <b>Soy Milk</b> (or any plant milk)</li>
+          <li>1 <b>Banana</b> OR 1 cup unsweetened <b>Applesauce</b></li>
+          <li>¾ cup of unsweetened <b>Soy Milk</b> (or any plant milk)</li>
           <li>5 Tbsps. of <b>Water</b></li>
           <li>1 tsp. of <b>Baking Powder</b></li>
           <li>½ tsp. of <b>Baking Soda</b></li>
           <li>¼ tsp. of <b>Pink Sea Salt</b></li>
           <li>½ cup of <b>Blueberries</b> (fresh or frozen)</li>
-          <li><b>Strawberry Preserves</b></li>
         </ul>
 
         <h3>Air Fryer Instructions</h3>
@@ -385,10 +444,241 @@
           <li>Pour mixture into muffin holders</li>
           <li>AirFry on 325°F for 17 minutes</li>
           <li>Let cool for 5-10 minutes before serving</li>
-          <li>Servce with Strawberry Preserves</li>
         </ol>
       </div>
     </div>
+  </section>
+
+  <!-- ---------- RECIPE #6: Tahini-Free Hummus ---------- -->
+  <section id="tahini-free-hummus" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Tahini-Free Hummus</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/hummus-0047-d112594_horiz-0823-687fda3ffe6f4a28ab2c7e50b5848843.jpg" alt="Tahini-Free Hummus photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 can of <b>Chickpeas</b>, drained and rinsed OR 1½ cups of cooked <b>Chickpeas</b></li>
+          <li>2 Tbsps. of <b>Rolled Oats</b>, blended into oat flour</li>
+          <li>3 Tbsps. of <b>Water</b></li>
+          <li>2 <b>Garlic Cloves</b>, minced</li>
+          <li>2 Tbsps. of fresh <b>Lemon Juice</b></li>
+          <li>½ tsp. of <b>Baking Soda</b></li>
+          <li>¼ tsp. of <b>Pink Sea Salt</b></li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+          <li>Mix all ingredients in a food processor</li>
+          <li>Blend until smooth</li>
+          <br>
+          <li><i>(Optional) Refrigerate for 30-60 minutes to firm up slightly</i></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE #7: Spaghetti Sauce ---------- -->
+  <section id="spaghetti-sauce" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Spaghetti Sauce</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/homemade-spaghetti-sauce-recipe-29.jpg" alt="Spaghetti Sauce photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 cans (28 oz. each) of <b>Tomatoes</b>, diced</li>
+          <li>3 Tbsps. of <b>Tomato Paste</b></li>
+          <li>1 medium<b>Onion</b>, chopped</li>
+          <li>4 <b>Garlic Cloves</b>, minced</li>
+          <li>½ cups and 3 Tbsps. of Water</li>
+          <li>1½ tsp. of dried <b>Italian Seasoning</b></li>
+          <li>½ tsp. of <b>Smoked Paprika</b></li>
+          <li>½ tsp. of <b>Black Pepper</b></li>
+          <li>1 tsp. of <b>Pink Sea Salt</b></li>
+        </ul>
+
+        <h3>Instapot Instructions</h3>
+        <ol>
+          <li>Sauté the onions with 3 Tbsps. of Water for 7 minutes</li>
+          <li>Add 4 garlic cloves, and stir for 45 seconds</li>
+          <li>Press Cancel on the heat</li>
+          <li>Add the ½ cup of Water and Tomato Paste, and stir for 15 seconds, until dissolved</li>
+          <li>Add the Italian Seasoning, Smoked Paprika, Black Pepper, and Salt</li>
+          <li>Do not stir the seasonings in yet</li>
+          <li>Keeping the lid off, sauté and stir for 35 minutes</li>
+          <li>Turn off the heat, and blend the sause in a blender</li>
+          <li>Put the blended sauce back in the pot, and sauté for another 8 minutes</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE #8: Banana Bread Muffins ---------- -->
+  <section id="banana-bread-muffins" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Banana Bread Muffins</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/banana-bread-muffins-9s.jpg" alt="Banana Bread Muffins photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>3 <b>Bananas</b>, mashed</li>
+          <li>2 cups of <b>Rolled Oats</b>, blended into oat flour</li>
+          <li>½ cup of <b>Monk Fruit Sweeneter</b></li>
+          <li>1 tsp. of <b>Baking Powder</b></li>
+          <li>½ tsp. of <b>Baking Soda</b></li>
+          <li>½ tsp. of <b>Pink Sea Salt</b></li>
+          <li>½ cup of unsweetened <b>Soy Milk</b> (or any plant milk)</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+          <li>Mix all ingredients in a food processor</li>
+          <li>Pour mixture into muffin holders</li>
+          <li>AirFry on 325°F for 15 minutes</li>
+          <li>Let cool for 10 minutes before serving</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE #9: Chickpea “Chicken” Salad ---------- -->
+  <section id="chickpea-chicken-salad" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Chickpea “Chicken” Salad</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/Summer-Chickpea-Salad-16-1020x1530.jpg" alt="Chickpea “Chicken” Salad photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 can of <b>Chickpeas</b>, drained and rinsed OR 1½ cups of cooked <b>Chickpeas</b></li>
+          <li>q stalk of <b>Celery</b>, chopped</li>
+          <li>¼ of an <b>Onion</b>, chopped</li>
+          <li>½ of an <b>Avacado</b></li>
+          <li>1½ Tbsps. of <b>Lemon Juice</b></li>
+          <li>¾ tsp. of <b>Pink Sea Salt</b></li>
+          <li>¼ tsp. of <b>Black Pepper</b></li>
+          <li>½ tsp. of <b>Onion Powder</b></li>
+          <li>½ tsp. of <b>Garlic Powder</b></li>
+          <li>1 Tbsps. of <b>Water</b></li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+          <li>Mash up Chickpeas</li>
+          <li>Combine all ingredients and stir together</li>
+          <li>Chill for 15-20 minutes so it firms up</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE #10: Potato Fries ---------- -->
+  <section id="potato-fries" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Potato Fries</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/airfryerfrozenfries.jpg" alt="Potato Fries photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1-3 unpeeled <b>Gold Potatoes</b>, sliced into thin fry slices</li>
+          <li>(Optional) ¼ tsp. of <b>Pink Sea Salt</b> per <b>Gold Potato</b> used</li>
+        </ul>
+
+        <br><br>
+        <h3>Airfryer Instructions</h3>
+        <ol>
+          <li>Soak the thin Potato fry slices in cold water for 15 minutes (to wash away the starch)</li>
+          <li>Cook the Potato fry slices for 15 minutes at 385°F in the Air Fryer (12 minutes if there are two layers of fries)</li>
+          <li>Shake the fries</li>
+          <li>Cook for another 8 minutes at 385°F (13 minutes if there are two layers of fries)</li>
+          <br>
+          <li><i>(Optional) Immediately, add Salt on top of finished fries</i></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE #11: Healthy Ketchup ---------- -->
+  <section id="healthy-ketchup" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Healthy Ketchup</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/2-Minute-healthy-ketchup-recipe.jpg" alt="Healthy Ketchup photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>3 <b>Tomatoes</b>, chopped</li>
+          <li>1 <b>Carrot</b>, peeled and chopped</li>
+          <li>½ <b>Onion</b>, chopped</li>
+          <li>1 <b>Garlic Clove</b></li>
+          <li>2 Tbsps. of <b>Apple Cider Vinegar</b></li>
+          <li>½ tsp. of <b>Pink Sea Salt</b></li>
+        </ul>
+
+        <br><br>
+        <h3>Instapot/Airfryer Instructions</h3>
+        <ol>
+          <li>Put Tomatoes, Carrot, Onion, and Garlic in the Instapot</li>
+          <li>Pressure cook on High for 10 minutes, and let it Natural Release</li>
+          <li>Add the Apple Cider Vinegar and Salt</li>
+          <li>Add everything into a blender, and blend it all together</li>
+          <li>Add into an AirFryer bowl, and AirFry it at 300°F for 8 minutes. After the first 4 minutes of it Air Frying, stir a bit</li>
+          <li>Let cool for 10 miuntes</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RECIPE #12: Healthy Mayonnaise ---------- -->
+  <section id="healthy-mayonnaise" class="recipe-page">
+    <button onclick="goHome()">← Back to recipes</button>
+    <br><br>
+    <h2>Healthy Mayonnaise</h2>
+
+    <div class="recipe-layout">
+      <img class="recipe-image" src="pictures/Healthy-Mayonnaise-Recipe-2.jpg" alt="Healthy Mayonnaise photo" />
+
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup of cooked <b>White Beans</b></li>
+          <li>2 Tbsps. of <b>Lemon Juice</b></li>
+          <li>1 Tbsps. of <b>Apple Cider Vinegar</b></li>
+          <li>½ tsp. of <b>Pink Sea Salt</b></li>
+          <li>1 <b>Garlic Clove</b></li>
+          <li>2 Tbsps. of <b>Water</b></li>
+        </ul>
+
+        <br><br>
+        <h3>Instructions</h3>
+        <ol>
+          <li>Blend all ingredients together</li>
+          <li>Chill for 20 minutes</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script>
